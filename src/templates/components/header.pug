@@ -1,0 +1,10 @@
+mixin header(classes)
+    header.header
+        .header__logo CA
+
+        include nav
+        +nav('header__nav')
+
+        include socials
+        +socials('header__socials')
+

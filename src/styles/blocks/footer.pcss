@@ -1,0 +1,75 @@
+.footer {
+    background-color: #1b1f22;
+    padding: rem(81px 0 84px);
+
+    color: white;
+
+    display: flex;
+
+    &__left {
+        width: calc(100% / 12 * 2);
+        min-width: calc(100% / 12 * 2);
+    }
+
+    &__right {
+        margin-left: calc(100% / 12 * 1);
+    }
+
+    &__year {
+        opacity: 0.1;
+        font-size: rem(48px);
+        font-weight: 700;
+        line-height: rem(30px);
+
+        margin-bottom: rem(31px);
+    }
+
+    &__fio {
+        font-size: rem(18px);
+        font-weight: 700;
+        line-height: rem(30px);
+
+        margin-bottom: rem(34px);
+    }
+
+    &__site {
+        opacity: .15;
+    }
+
+    &__nav {
+        margin-bottom: rem(70px);
+    }
+
+    &__text {
+        opacity: .3;
+
+        &--cursive {
+            opacity: 1;
+            margin-top: rem(35px);
+        }
+    }
+
+    &__socials {
+        margin-top: rem(27px);
+
+        .socials__link {
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+    }
+
+    &__right-blocks {
+        display: flex;
+
+        & > div {
+            width: 50%;
+
+            &:first-child {
+                margin-right: rem(22.5px);
+            }
+            &:last-child {
+                margin-left: rem(22.5px);
+            }
+        }
+    }
+}

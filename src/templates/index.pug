@@ -1,0 +1,254 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Portfolio | main page
+    body
+        //- .wrapper
+        //-   .maincontent
+        //-     +image('content/user.jpg', 'user-pic')
+        //-     +icon('link', 'link-class')
+        //-     .icon-bg
+
+        .wrapper
+            include components/bg-scroll-parallax
+
+            .wrapper__content
+
+                section.section1.wrapper__padding
+
+                    .section1__content
+
+                        include components/header
+                        +header()
+
+                        .section1__titles
+                            .section1__subtitle
+                                | Личный сайт
+                                br
+                                | веб разработчика
+                            .section1__title
+                                | Серкин
+                                br
+                                | Александр
+
+                        button.section1__scroll-btn
+                            span Скролл
+                            +icon('scroll', 'scroll-icon')
+
+                section.section2.wrapper__padding
+
+                    .section2__left
+                        .section2__photo
+                            +image('content/me.jpg', 'user-pic')
+                        .section2__list
+                            .section2__list-row
+                                .section2__list-label Проживаю:
+                                .section2__list-title Одесса
+                            .section2__list-row
+                                .section2__list-label Возраст:
+                                .section2__list-title 28 лет
+                            .section2__list-row
+                                .section2__list-label Работаю:
+                                .section2__list-title WEB developer
+                    .section2__right
+                        .simple-text.section2__text Привет, меня зовут
+                        h3.title.section2__fio Серкин Александр
+                        .simple-text.section2__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        .simple-text.simple-text--cursive.section2__text.section2__text--cursive Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+                section.section3.wrapper__padding
+
+                    .section3__title Чем я могу быть полезен вам
+                    .simple-text.section3__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+                    -
+                        var skills = [
+                            {
+                                "skillType": "Frontend",
+                                "skills": [
+                                {
+                                    "id": 1,
+                                    "name": "Html",
+                                    "percent": 100
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "css",
+                                    "percent": 90
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "JS",
+                                    "percent": 80
+                                }]
+                            },
+                            {
+                                "skillType": "Workflow",
+                                "skills": [
+                                {
+                                    "id": 4,
+                                    "name": "Git",
+                                    "percent": 90
+                                },
+                                {
+                                    "id": 5,
+                                    "name": "Gulp",
+                                    "percent": 90
+                                },
+                                {
+                                    "id": 6,
+                                    "name": "webpack",
+                                    "percent": 20
+                                }]
+                            }]
+
+                    .section3__skills
+                        include components/skills
+                        +skills(skills)
+
+                    .section3__hands
+                        +image('content/section3-hands.png', 'section3-hands')
+
+
+                section.section4.wrapper__padding
+
+                    h3.title.section4__title Мои работы
+                    .section4__slider.nice-slider
+
+                        .nice-slider__preview
+                            .nice-slider__full-pics
+                                .nice-slider__full-pic(
+                                    style=`background-image: url(${require(`images/content/1.jpg`)})`
+                                    data-slide="1"
+                                ).active
+                                .nice-slider__full-pic(
+                                    style=`background-image: url(${require(`images/content/2.jpg`)})`
+                                    data-slide="2"
+                                )
+                                .nice-slider__full-pic(
+                                    style=`background-image: url(${require(`images/content/3.jpg`)})`
+                                    data-slide="3"
+                                )
+                            .nice-slider__thumbs
+                                button.nice-slider__thumb(
+                                        style=`background-image: url(${require(`images/content/1.jpg`)})`
+                                        data-slide="1"
+                                    ).active
+                                button.nice-slider__thumb(
+                                        style=`background-image: url(${require(`images/content/2.jpg`)})`
+                                        data-slide="2"
+                                    )
+                                button.nice-slider__thumb(
+                                        style=`background-image: url(${require(`images/content/3.jpg`)})`
+                                        data-slide="3"
+                                    )
+                            .nice-slider__btns
+                                button.nice-slider__btn.nice-slider__btn--next
+                                    .nice-slider__btn-icon
+                                button.nice-slider__btn.nice-slider__btn--prev
+                                    .nice-slider__btn-icon
+
+                        .nice-slider__info
+                            .nice-slider__points
+                                .nice-slider__point HTML
+                                .nice-slider__point JS
+                                .nice-slider__point CSS
+                            .nice-slider__title Сайт школы образования
+                            .nice-slider__description.simple-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                            a(href="#").nice-slider__link
+                                +icon('link', 'link-icon')
+                                span Посмотреть сайт
+
+                section.section5.wrapper__padding
+                    .section5__leaf
+                        +image('content/section5-leaf.png', 'section5-leaf')
+
+                    h3.title.section5__title Мои работы
+
+                    -
+                        var gossips = [
+                            {
+                                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi explicabo iusto sed aspernatur voluptatibus nisi, doloremque nostrum, provident asperiores pariatur, magnam atque itaque officia natus, reiciendis laudantium. Magnam, tempora, dolor.',
+                                photo: 'lennon.jpg',
+                                fio: 'John Lennon',
+                                position: 'lead'
+                            },
+                            {
+                                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi explicabo iusto sed aspernatur voluptatibus nisi, doloremque nostrum, provident asperiores pariatur, magnam atque itaque officia natus, reiciendis laudantium. Magnam, tempora, dolor.',
+                                photo: 'george.jpg',
+                                fio: 'George Harrison',
+                                position: 'guitar'
+                            },
+                            {
+                                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi explicabo iusto sed aspernatur voluptatibus nisi, doloremque nostrum, provident asperiores pariatur, magnam atque itaque officia natus, reiciendis laudantium. Magnam, tempora, dolor.',
+                                photo: 'paul.jpg',
+                                fio: 'Paul Mccartney',
+                                position: 'Bass'
+                            },
+                            {
+                                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi explicabo iusto sed aspernatur voluptatibus nisi, doloremque nostrum, provident asperiores pariatur, magnam atque itaque officia natus, reiciendis laudantium. Magnam, tempora, dolor.',
+                                photo: 'ringo.png',
+                                fio: 'Ringo Starr',
+                                position: 'Drums'
+                            }
+                        ];
+
+                    include components/gossip-slider
+                    +gossipSlider(gossips)
+
+
+                    form(action="" method="post").form
+                        h3.title.form__title Связаться со мной
+
+                        .form__content
+                            .form__input-block.form__input-block--name
+                                .form__label Введите ваше имя
+                                input.form__input(type="text" name="name")
+                            .form__input-block.form__input-block--email
+                                .form__label Введите ваш email
+                                input.form__input(type="email" name="email")
+                            .form__textarea-block
+                                .form__label Сообщение к письму
+                                textarea(name="message").form__textarea
+
+                        button(type="submit").form__submit
+                            span Отправить
+
+                footer.footer.wrapper__padding
+
+                    .footer__left
+                        .footer__year © 2019
+                        .footer__fio Серкин Александр
+                        .footer__site.simple-text Личный сайт веб-разработчика
+                    .footer__right
+
+                        include components/nav
+                        +nav('footer__nav')
+
+                        .footer__right-blocks
+                            .footer__right-blocks-left
+                                .simple-text.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+
+                                include components/socials
+                                +socials('footer__socials')
+
+                            .footer__right-blocks-right
+                                .simple-text.footer__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                                .simple-text.simple-text--cursive.footer__text.footer__text--cursive Martin Golding
+
+
+
+
+
+
+
+
+
+
+
+

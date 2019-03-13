@@ -1,0 +1,42 @@
+.circle {
+    width: rem(134px);
+    height: rem(134px);
+
+    position: relative;
+
+    &__svg {
+        fill: none;
+    }
+
+    &__first {
+        stroke: #413c3a;
+        stroke-width: 4;
+    }
+
+    &__second {
+        stroke: #ef8600;
+        stroke-width: 10;
+        transition: all 1s;
+    }
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: rem(18px);
+        font-weight: 700;
+        line-height: rem(48px);
+        opacity: .5;
+
+        //text-transform: uppercase;
+        text-align: center;
+    }
+}

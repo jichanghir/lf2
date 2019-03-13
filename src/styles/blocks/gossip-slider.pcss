@@ -1,0 +1,86 @@
+.gossip-slider {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+
+    &__slide {
+        width: 50%;
+        min-width: 50%;
+        display: flex !important;
+        flex-wrap: wrap;
+
+        padding: rem(0 82px 0 92px);
+        position: relative;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: svg-load('quote.svg', fill=#fff, width=100%, height=100%);
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: .05;
+            width: rem(69px);
+            height: rem(59px);
+        }
+    }
+
+    &__text {
+        width: 100%;
+        margin-bottom: rem(32px);
+
+        opacity: .5;
+        color: white;
+/*         font-size: 16px;
+        line-height: 1.62; */
+    }
+
+    &__photo {
+        width: rem(75px);
+        height: rem(75px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 50%;
+        margin-right: rem(31px);
+    }
+
+    &__about {
+        width: calc(100% - rem(107px));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        color: white;
+    }
+
+    &__fio {
+        font-size: rem(18px);
+        font-weight: 700;
+        line-height: rem(48px);
+    }
+
+    &__position {
+        opacity: .3;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: rem(30px);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .gossip-slider {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gossip-slider {
+        &__slide {
+            background-position: center top;
+        }
+    }
+}

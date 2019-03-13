@@ -1,0 +1,50 @@
+.socials {
+    display: flex;
+
+    &__link {
+        width: rem(50px);
+        height: rem(50px);
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: .5;
+
+        transition: all .25s;
+
+        &:not(:last-child) {
+            margin-right: rem(20px);
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--inst {
+            background-image: svg-load(
+                'insta.svg',
+                fill=white,
+                width=rem(25px),
+                height=rem(25px)
+            );
+        }
+
+        &--vk {
+            background-image: svg-load(
+                'vk.svg',
+                fill=white,
+                width=rem(25px),
+                height=rem(25px)
+            );
+        }
+
+        &--gh {
+            background-image: svg-load(
+                'github.svg',
+                fill=white,
+                width=rem(25px),
+                height=rem(25px)
+            );
+        }
+
+
+    }
+}

@@ -1,0 +1,52 @@
+.skills {
+
+    &.clear .circle__second {
+        stroke-dasharray: 0 307.87582 !important;
+    }
+
+    &__title {
+        color: white;
+        font-size: rem(24px);
+        font-weight: 700;
+        line-height: rem(48px);
+
+        margin-bottom: rem(50px);
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 0 rem(40px) rem(40px) 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .skills {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item {
+            margin: 0 19px 40px 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .skills {
+        text-align: center;
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__item {
+            margin: 0 10px 40px 10px;
+        }
+    }
+}

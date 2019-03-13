@@ -1,0 +1,7 @@
+.bg-parallax
+    .bg-parallax__container#bg-parallax-scroll
+        each i in [1,2,3,4]
+            .bg-parallax__layer
+                +image(`parallaxtrain/ls${i}.png`, 'bg-parallax__img')
+                //- img(src=`/images/parallax/l${i}.png`, alt="").bg-parallax__img
+                //- img(src="", alt="").bg-parallax__img

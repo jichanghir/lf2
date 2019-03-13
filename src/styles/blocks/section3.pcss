@@ -1,0 +1,43 @@
+.section3 {
+    background-color: #1b1f22;
+    background-image: resolve('section3.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    padding: rem(149px 0);
+
+    position: relative;
+
+    color: white;
+
+    &__title,
+    &__text {
+        padding-left: calc(100% / 12 * 3);
+        width: calc(100% / 12 * 9);
+    }
+
+    &__title {
+        font-size: rem(30px);
+        font-weight: 700;
+        line-height: rem(36px);
+
+        margin-bottom: rem(59px);
+    }
+
+    &__text {
+        opacity: .5;
+        margin-bottom: rem(96px);
+    }
+
+    &__skills {
+        width: calc(100% / 12 * 8);
+        margin-left: auto;
+    }
+
+    &__hands {
+        position: absolute;
+        left: rem(-50px);
+        bottom: rem(-50px);
+    }
+}

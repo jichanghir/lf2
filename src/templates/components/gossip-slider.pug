@@ -1,0 +1,13 @@
+mixin gossipSlider(gossips)
+
+    section.gossip-slider#gossip-slider
+        each gossip in gossips
+            .gossip-slider__slide
+                .gossip-slider__text.simple-text= gossip.text
+                .gossip-slider__photo(
+                    style=`background-image: url(${require(`images/gossips/${gossip.photo}`)})`
+                )
+                .gossip-slider__about
+                    .gossip-slider__fio= gossip.fio
+                    .gossip-slider__position= gossip.position
+

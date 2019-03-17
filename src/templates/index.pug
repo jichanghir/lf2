@@ -134,11 +134,35 @@ html(lang="en")
                                     style=`background-image: url(${require(`images/content/3.jpg`)})`
                                     data-slide="3"
                                 )
+                                .nice-slider__full-pic(
+                                    style=`background-image: url(${require(`images/content/1.jpg`)})`
+                                    data-slide="1"
+                                )
+                                .nice-slider__full-pic(
+                                    style=`background-image: url(${require(`images/content/2.jpg`)})`
+                                    data-slide="2"
+                                )
+                                .nice-slider__full-pic(
+                                    style=`background-image: url(${require(`images/content/3.jpg`)})`
+                                    data-slide="3"
+                                )
                             .nice-slider__thumbs
                                 button.nice-slider__thumb(
                                         style=`background-image: url(${require(`images/content/1.jpg`)})`
                                         data-slide="1"
                                     ).active
+                                button.nice-slider__thumb(
+                                        style=`background-image: url(${require(`images/content/2.jpg`)})`
+                                        data-slide="2"
+                                    )
+                                button.nice-slider__thumb(
+                                        style=`background-image: url(${require(`images/content/3.jpg`)})`
+                                        data-slide="3"
+                                    )
+                                button.nice-slider__thumb(
+                                        style=`background-image: url(${require(`images/content/1.jpg`)})`
+                                        data-slide="1"
+                                    )
                                 button.nice-slider__thumb(
                                         style=`background-image: url(${require(`images/content/2.jpg`)})`
                                         data-slide="2"
@@ -153,6 +177,8 @@ html(lang="en")
                                 button.nice-slider__btn.nice-slider__btn--prev
                                     .nice-slider__btn-icon
 
+                            .nice-slider__current 2
+
                         .nice-slider__info
                             .nice-slider__points
                                 .nice-slider__point HTML
@@ -163,6 +189,7 @@ html(lang="en")
                             a(href="#").nice-slider__link
                                 +icon('link', 'link-icon')
                                 span Посмотреть сайт
+
 
                 section.section5.wrapper__padding
                     .section5__leaf

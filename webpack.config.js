@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
     test: /\.(p|post|)css$/,
     use: [
       isProductionBuild ? MiniCssExtractPlugin.loader : "vue-style-loader",
-      "css-loader",
+      {loader: "css-loader", options: {sourceMap: isProductionBuild ? false : true}},
       "postcss-loader"
     ]
   };
@@ -85,6 +85,7 @@ module.exports = (env, argv) => {
   const config = {
     entry: {
       main: "./src/main.js",
+      about: "./src/about.js",
       admin: "./src/admin/main.js"
     },
     output: {
@@ -115,6 +116,11 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: "src/templates/index.pug",
         chunks: ["main"]
+      }),
+      new HtmlWebpackPlugin({
+        template: "src/templates/about.pug",
+        filename: "about.html",
+        chunks: ["about"]
       }),
       new HtmlWebpackPlugin({
         template: "src/admin/index.pug",

@@ -50,6 +50,7 @@
     &__thumb {
         height: 100%;
         width: rem(178px);
+        min-width: rem(178px);
 
         background-size: cover;
         background-position: center center;
@@ -100,6 +101,17 @@
         height: rem(10px);
         background-image: svg-load('arrow-down.svg', fill=#ffffff, width=100%, height=100%);
         background-repeat: no-repeat;
+    }
+
+    &__current {
+        position: absolute;
+        left: calc(100% - rem(45px));
+        top: rem(7px);
+        color: #f0f0f0;
+        font-size: rem(300px);
+        font-weight: 900;
+        line-height: rem(200px);
+        z-index: -1;
     }
 
     &__info {
